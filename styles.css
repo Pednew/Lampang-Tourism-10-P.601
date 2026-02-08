@@ -126,6 +126,11 @@ nav ul li a.active {
 }
 
 /* ================== ส่วนเนื้อหา ================== */
+.about {
+    padding: 80px o;
+    background-color: white;
+}
+
 .content-wrapper {
     display: flex;
     align-items: center;
@@ -158,6 +163,73 @@ nav ul li a.active {
     transform: scale(1.05);
 }
 
+/* ================== Attraction Section ================== */
+.attraction{
+    padding: 80px;
+}
+
+.attraction-item{
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+    margin-bottom: 60px; 
+    background-color: white; 
+    padding: 40px; 
+    border-radius: 15px; 
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1); 
+    transition: transform 0.3s ease; 
+}
+
+.attraction-item:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
+} 
+
+.attraction-item.reverse { 
+    flex-direction: row-reverse; 
+} 
+
+.attraction-image { 
+    flex: 1; 
+} 
+
+.attraction-image img { 
+    width: 100%; 
+    border-radius: 10px; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+} 
+
+.attraction-content { 
+flex: 1; 
+} 
+
+.attraction-content h3 { 
+    font-size: 28px; 
+    color: #8B4513; 
+    margin-bottom: 20px; 
+} 
+
+.attraction-content p { 
+    font-size: 16px; 
+    line-height: 1.8; 
+    margin-bottom: 20px; 
+    text-align: justify; 
+} 
+
+.btn-link { 
+    display: inline-block; 
+    color: #F4A460; 
+    text-decoration: none; 
+    font-weight: bold; 
+    font-size: 18px; 
+    transition: all 0.3s ease; 
+} 
+
+.btn-link:hover { 
+    color: #D2691E; 
+    transform: translateX(5px);
+}
+
 /* ================== Detail Page ================== */
 .detail-hero {
     background: linear-gradient(rgba(244,164,96,0.8), rgba(210,105,30,0.8)),
@@ -179,7 +251,6 @@ nav ul li a.active {
     padding: 80px 0;
     background-color: white;
 }
-
 /* ================== กล่องข้อมูล ================== */
 .info-box {
     background-color: #FFF8DC;
@@ -216,7 +287,6 @@ nav ul li a.active {
     font-weight: bold;
     margin-right: 5px;
 }
-
 /* ================== แกลเลอรีรูปภาพ ================== */
 .gallery {
     display: grid;
@@ -238,7 +308,7 @@ nav ul li a.active {
     transform: scale(1.05);
 }
 
-/* ================== Contact Section ================== */
+/* ================== Contact From ================== */
 .contact-section {
     padding: 80px 0;
 }
@@ -248,8 +318,7 @@ nav ul li a.active {
     gap: 50px;
 }
 
-.contact-info,
-.contact-form {
+.contact-info {
     flex: 1;
     background-color: white;
     padding: 40px;
@@ -257,8 +326,7 @@ nav ul li a.active {
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
-.contact-info h3,
-.contact-form h3 {
+.contact-info h3,{
     color: #8B4513;
     margin-bottom: 20px;
     font-size: 24px;
@@ -270,6 +338,13 @@ nav ul li a.active {
     line-height: 1.8;
 }
 
+.contact-form {
+    flex: 1;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
 /* ================== Form ================== */
 .form-group {
     margin-bottom: 25px;
@@ -389,7 +464,9 @@ footer {
     }
 
     .content-wrapper,
-    .contact-container {
+    .attraction-item,
+    .attraction-item.reverse,
+    .contact-container,{
         flex-direction: column;
     }
 
